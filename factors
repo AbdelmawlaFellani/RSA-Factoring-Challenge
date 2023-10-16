@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+import sys
+
+filename = sys.argv[1]
+
+with open(filename, 'r') as file:
+    for line in file:
+        numbers = int(line)
+        p = 2
+        while numbers > 1:
+            if numbers % p == 0:
+                q = numbers // p
+                print(f"{numbers}={p}*{q}")
+                break
+            p += 1
+
